@@ -1,0 +1,35 @@
+title: 누구를 위한 개발일지인가
+description: > # this means to ignore newlines until "baseurl:"
+  devlog for sungwonkim
+permalink: ':title/'
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://sungwonkim-dev.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+site-twitter: #if your site has a twitter account, enter it here
+
+# Author Settings
+author: Kim sungwon # add your name
+author-img: david-freeman.jpg # add your photo
+about-author: programmer. # add description
+social-twitter: # add your Twitter handle
+social-facebook: # add your Facebook handle
+social-github: sungwonkim-dev # add your Github handle
+social-linkedin: # add your Linkedin handle
+social-email: swsz@kakao.com# add your Email address
+
+# Disqus
+discus-identifier: mr-brown # add your discus identifier
+
+# Tracker
+analytics: # Google Analytics
+
+# Build Settings
+markdown: kramdown
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jemoji
+
+paginate: 8
+paginate_path: "/page/:num"
+
+exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
