@@ -7,17 +7,17 @@ url: "http://sungwonkim-dev.github.io/" # the base hostname & protocol for your 
 site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
-author: Kim sungwon # add your name
+author: 김성원 # add your name
 author-img:  # add your photo
-about-author: programmer. # add description
+about-author: 개발자. # add description
 social-twitter: # add your Twitter handle
 social-facebook: # add your Facebook handle
 social-github: sungwonkim-dev # add your Github handle
 social-linkedin: # add your Linkedin handle
-social-email: swsz@kakao.com# add your Email address
+social-email: swsz@kakao.com # add your Email address
 
 # Disqus
-discus-identifier: mr-brown # add your discus identifier
+discus-identifier: sungwonkim-dev # add your discus identifier
 
 # Tracker
 analytics: # Google Analytics
