@@ -3,7 +3,8 @@ layout: post
 title: [Java] 나만의 코드 컨벤션 (1) - 왜?
 date: 2020-01-03 00:00:00 +0300
 description: 왜 나만의 코드 컨벤션을 만드는가? # Add post description (optional)
-img: #software.jpg # Add image post (optional)
+img: software.jpg # Add image post (optional)
+fig-caption: # Add figcaption (optional)
 tags: [java, convention] # add tag
 ---
 
