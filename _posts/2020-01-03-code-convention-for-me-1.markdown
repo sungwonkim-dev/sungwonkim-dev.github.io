@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Java] 나만의 코드 컨벤션 (1) - 왜?
+title: 나만의 코드 컨벤션 (1) - 왜?
 date: 2020-01-03 00:00:00 +0300
 description: 왜 나만의 코드 컨벤션을 만드는가? # Add post description (optional)
 img: software.jpg # Add image post (optional)
@@ -9,7 +9,7 @@ tags: [java, convention] # add tag
 ---
 
 > 
-###왜 나만의 코드 컨벤션을 만드나?
+###1왜 나만의 코드 컨벤션을 만드나?
 ####이유는 네 가지가 있다.
 1. 같은 기능을 하는 함수지만 작성할 때마다 함수명이 달랐다.
 2. 1번의 영향으로 과거 코드의 수정이 필요할 때 함수를 다시 분석하는 시간을 길어져 낭비했다.
