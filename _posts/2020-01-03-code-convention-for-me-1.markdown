@@ -7,8 +7,9 @@ img: #software.jpg # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [java, convention] # add tag
 ---
-나만의 코드 컨벤션을 만드는 이유, 앞으로 진행 순서에 대한 글
-
+나만의 코드 컨벤션을 만드는 이유, 앞으로 진행 순서에 대한 글  
+  
+  
 ###왜 나만의 코드 컨벤션을 만드나?
 ####이유는 네 가지가 있다.
 1. 같은 기능을 하는 함수지만 작성할 때마다 함수명이 달랐다.
