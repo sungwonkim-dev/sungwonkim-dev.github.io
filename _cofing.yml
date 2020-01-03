@@ -15,7 +15,7 @@ remote_theme             : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "euc-kr"
+locale                   : "en-US"
 title                    : "누구를 위한 개발일지인가"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
