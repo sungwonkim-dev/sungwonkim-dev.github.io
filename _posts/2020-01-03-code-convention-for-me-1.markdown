@@ -20,7 +20,7 @@ tags: [java, convention] # add tag
 ### 앞으로 진행 순서는 어떻게 되나?
 #### 아래와 같이 포스팅을 진행할 예정이다.
 * 나만의 코드 컨벤션 - 변수, 클래스, 패키지편
-* 나만의 코드 컨벤션 - Java Database Query편
+* 나만의 코드 컨벤션 - Database Query편
 * 나만의 코드 컨벤션 - 함수편
 
 
