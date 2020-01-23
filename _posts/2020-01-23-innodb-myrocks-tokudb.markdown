@@ -10,7 +10,7 @@ tags: [database, maria db, MySQL] # add tag
 # InnoDB vs MyRocks vs TokuDB
 ## 목표 : InnoDB, MyRocks, TokuDB의 특징을 이해, 이슈 개선안 도출 
 ### 최근 발생한 이슈    
-1. 로그성 데이터를 저장하는 테이블이 커지기 시작하면서 저장소의 용량이 부족해짐  
+1. 로그성 데이터를 저장하는 테이블이 커지기 시작하면서 저장소의 용량이 부족해짐
 2. 1번으로 인해서 로그성 데이터가 저장되지 못 하는 장애 상황 발생
 
 ### 목표
