@@ -14,7 +14,7 @@ tags: [database, maria db, MySQL] # add tag
 1. 로그성 데이터를 저장하는 테이블이 커지기 시작하면서 저장소의 용량이 부족해짐  
 2. 1번으로 인해서 로그성 데이터가 저장되지 못 하는 장애 상황 발생
 <br>
-<br> 
+<br>
 ### 목표
 **데이터의 압축률이 높은 Storage Engine 또는 기능을 찾고자 함**  
    - 로그성 데이터에 적합한 Storage Engine 또는 기능
@@ -51,14 +51,14 @@ tags: [database, maria db, MySQL] # add tag
    - automatic crash recovery
    
 **아래부턴 각 엔진별 비교이기 때문에 사용되는 강조 표현에는 `각 엔진에 비해`가 있다고 생각해주세요.**  
-#### _InnoDB_  
+####_InnoDB_  
    - 만능이다
       - 어느 상황에나 성능 이슈에 크게 신경쓰지 않아도 된다.
    - MySQL 5.5.5 버젼부턴 기본 엔진으로 사용된다.
       - 만능이라는 얘기  
 <br>
 <br>
-#### _TokuDB_
+####_TokuDB_
    - 쓰기 작업에 최적화된 엔진  
    - 꽤 괜찮은 성능의 압축 기능  
    - 빅데이터를 다루는 상황에서는 가장 좋은 선택  
@@ -78,7 +78,7 @@ tags: [database, maria db, MySQL] # add tag
    - InnoDB에 비해 Crash Recovery기능이 부족함
 <br>
 <br>     
-#### _MyRocks_
+####_MyRocks_
    - 쓰기와 저장 공간 구성에 최적화된 엔진
    - 최고 성능의 압축 기능
    - SSD를 사용하는 상황에서 가장 좋은 선택
