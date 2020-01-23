@@ -12,11 +12,13 @@ tags: [database, maria db, MySQL] # add tag
 ### 최근 발생한 이슈    
 1. 로그성 데이터를 저장하는 테이블이 커지기 시작하면서 저장소의 용량이 부족해짐  
 2. 1번으로 인해서 로그성 데이터가 저장되지 못 하는 장애 상황 발생
+
 ### 목표
 **데이터의 압축률이 높은 Storage Engine 또는 기능을 찾고자 함**  
   * 로그성 데이터에 적합한 Storage Engine 또는 기능
   * NoSQL은 최후의 수단으로..
     - 시스템  구조상..
+    
 ### DB와 Table 정보
 1. DB 정보
   * mysql  Ver 14.14 Distrib 5.1.73, for redhat-linux-gnu (x86_64) using readline 5.1  
