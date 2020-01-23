@@ -29,7 +29,7 @@ tags: [database, maria db, MySQL] # add tag
   *  약 640,000,000개의 로우가 존재
     * 16개 테이블
   * 각 테이블당 최대 199GB, 최소 58GB의 용량을 차지  
-    - 전체 1,726GB
+    * 전체 1,726GB
   * 주로 insert와 select 쿼리만 사용한다.
 
 ### Storage Engine 후보
@@ -84,10 +84,11 @@ tags: [database, maria db, MySQL] # add tag
   * **외래키가 지원되지 않음**
   * 일부 타입에만 인덱스를 적용할 수 있다.
 ### **결론**
-1. **이론상 로그성 데이터를 저장하기엔 InnoDB보단 TokuDB나 MyRocks를 사용하는 것이 이점이 더 많아보인다.**  
-2. **여러가지 운영 환경과 시스템 구조에 대한 것을 종합해서 적용 여부를 판단하는 것이 좋겠다.**    
-3. **이론도 중요하지만 실제로 벤치마킹 해봐야 할 거 같다.**  
-4. **다음 글은 실제 벤치마킹에 대한 글이 될 것이다.**  
+1. **이론상 로그성 데이터를 저장하기엔 InnoDB보단 TokuDB나 MyRocks를 사용하는 것이 이점이 더 많아보인다.**
+2. **여러가지 운영 환경과 시스템 구조에 대한 것을 종합해서 적용 여부를 판단하는 것이 좋겠다.**
+3. **이론도 중요하지만 실제로 벤치마킹 해봐야 할 거 같다.**
+4. **다음 글은 실제 벤치마킹에 대한 글이 될 것이다.**
+  
 참고 :   
 [[choosing-the-right-storage-engine]](https://mariadb.com/kb/en/choosing-the-right-storage-engine/)  
 [[MySQL Storage Engines - which do you use? TokuDB? MyRocks? InnoDB?]](https://www.slideshare.net/SvetaSmirnova/mysql-storage-engines-which-do-you-use-tokudb-myrocks-innodb)    
