@@ -8,15 +8,15 @@ fig-caption: # Add figcaption (optional)
 tags: [database, maria db, MySQL] # add tag
 ---
 
-#InnoDB vs MyRocks vs TokuDB
-##목표 : InnoDB, MyRocks, TokuDB의 특징을 이해, 이슈 개선안 도출 
-###최근 발생한 이슈    
+# InnoDB vs MyRocks vs TokuDB
+## 목표 : InnoDB, MyRocks, TokuDB의 특징을 이해, 이슈 개선안 도출 
+### 최근 발생한 이슈    
 1. 로그성 데이터를 저장하는 테이블이 커지기 시작하면서 저장소의 용량이 부족해짐
     - 거의 full 수준  
 2. 1번으로 인해서 로그성 데이터가 저장되지 못 하는 장애 상황 발생
 <br>
 <br> 
-###목표
+### 목표
 **데이터의 압축률이 높은 Storage Engine 또는 기능을 찾고자 함**  
    - 로그성 데이터에 적합한 Storage Engine 또는 기능
    - NoSQL은 최후의 수단으로..
@@ -24,7 +24,7 @@ tags: [database, maria db, MySQL] # add tag
 <br>
 <br>  
 
-###DB와 Table 정보
+### DB와 Table 정보
 1. DB 정보 
     - mysql  Ver 14.14 Distrib 5.1.73, for redhat-linux-gnu (x86_64) using readline 5.1  
     
@@ -38,8 +38,8 @@ tags: [database, maria db, MySQL] # add tag
     - 주로 insert와 select 쿼리만 사용한다.
 <br>
 <br>
-###Storage Engine 후보
-####InnoDB와 후보들의 공통 특징
+### Storage Engine 후보
+#### InnoDB와 후보들의 공통 특징
    - Transaction 지원
    - ACID
    - Row Level Locking
@@ -54,19 +54,19 @@ tags: [database, maria db, MySQL] # add tag
    - automatic crash recovery
    
 **아래부턴 각 엔진별 비교이기 때문에 사용되는 강조 표현에는 `각 엔진에 비해`가 있다고 생각해주세요.**  
-####**InnoDB**  
+#### **InnoDB**  
    - 만능이다
       - 어느 상황에나 성능 이슈에 크게 신경쓰지 않아도 된다.
    - MySQL 5.5.5 버젼부턴 기본 엔진으로 사용된다.
       - 만능이라는 얘기  
 <br>
 <br>
-####**TokuDB**
+#### **TokuDB**
    - 쓰기 작업에 최적화된 엔진  
    - 꽤 괜찮은 성능의 압축 기능  
    - 빅데이터를 다루는 상황에서는 가장 좋은 선택  
 <br>     
-#####**조금 더 자세하게 알아보자**   
+##### **조금 더 자세하게 알아보자**   
    - 읽기 최적화
       - 보조 인덱스 사용
       - Read Free Replication
@@ -81,13 +81,13 @@ tags: [database, maria db, MySQL] # add tag
    - InnoDB에 비해 Crash Recovery기능이 부족함
 <br>
 <br>     
-####**MyRocks**
+#### **MyRocks**
    - 쓰기와 저장 공간 구성에 최적화된 엔진
    - 최고 성능의 압축 기능
    - SSD를 사용하는 상황에서 가장 좋은 선택
    - [[MyRocks: A space- and write-optimized MySQL database]](https://engineering.fb.com/core-data/myrocks-a-space-and-write-optimized-mysql-database/)  
 <br>
-#####**조금 더 자세하게 알아보자**
+##### **조금 더 자세하게 알아보자**
    - LSM Tree 사용
        - 쓰기와 저장 공간 구성에 최적화 된 방법
        - 모든 쓰기 동작은 메모리 테이블과 WAL을 먼저 수행
@@ -97,15 +97,14 @@ tags: [database, maria db, MySQL] # add tag
 <br>
 <br>
 <br> 
-###**결론**
+### **결론**
 1. **이론상 로그성 데이터를 저장하기엔 InnoDB보단 TokuDB나 MyRocks를 사용하는 것이 이점이 더 많아보인다.**  
 2. **여러가지 운영 환경과 시스템 구조에 대한 것을 종합해서 적용 여부를 판단하는 것이 좋겠다.**  
    - **MySQL -> MariaDB, Batch 어플리케이션 이슈 등**  
 3. **이론도 중요하지만 실제로 벤치마킹 해봐야 할 거 같다.**  
 4. **다음 글은 실제 벤치마킹에 대한 글이 될 것이다.**  
 <br>
-#
-#  
+<br>
 참고 :   
 [[choosing-the-right-storage-engine]](https://mariadb.com/kb/en/choosing-the-right-storage-engine/)  
 [[MySQL Storage Engines - which do you use? TokuDB? MyRocks? InnoDB?]](https://www.slideshare.net/SvetaSmirnova/mysql-storage-engines-which-do-you-use-tokudb-myrocks-innodb)    
