@@ -12,16 +12,14 @@ tags: [database, maria db, MySQL] # add tag
 ## 목표 : InnoDB, MyRocks, TokuDB의 특징을 이해, 이슈 개선안 도출 
 ### 최근 발생한 이슈    
 1. 로그성 데이터를 저장하는 테이블이 커지기 시작하면서 저장소의 용량이 부족해짐  
-2. 1번으로 인해서 로그성 데이터가 저장되지 못 하는 장애 상황 발생
-<br>
-<br>
+2. 1번으로 인해서 로그성 데이터가 저장되지 못 하는 장애 상황 발생  
+
 ### 목표
 **데이터의 압축률이 높은 Storage Engine 또는 기능을 찾고자 함**  
   - 로그성 데이터에 적합한 Storage Engine 또는 기능
   - NoSQL은 최후의 수단으로..
-    - 시스템  구조상..
-<br>
-<br>  
+    - 시스템  구조상..  
+  
 ### DB와 Table 정보
 1. DB 정보
   - mysql  Ver 14.14 Distrib 5.1.73, for redhat-linux-gnu (x86_64) using readline 5.1  
@@ -32,9 +30,7 @@ tags: [database, maria db, MySQL] # add tag
     - 16개 테이블
   - 각 테이블당 최대 199GB, 최소 58GB의 용량을 차지  
     - 전체 1,726GB
-  - 주로 insert와 select 쿼리만 사용한다.
-<br>
-<br>
+  - 주로 insert와 select 쿼리만 사용한다.  
 ### Storage Engine 후보
 #### InnoDB와 후보들의 공통 특징
   - Transaction 지원
@@ -51,19 +47,16 @@ tags: [database, maria db, MySQL] # add tag
   - automatic crash recovery
    
 **아래부턴 각 엔진별 비교이기 때문에 사용되는 강조 표현에는 `각 엔진에 비해`가 있다고 생각해주세요.**  
-####_InnoDB_  
+#### _InnoDB_  
   - 만능이다
     - 어느 상황에나 성능 이슈에 크게 신경쓰지 않아도 된다.
   - MySQL 5.5.5 버젼부턴 기본 엔진으로 사용된다.
     - 만능이라는 얘기  
-<br>
-<br>
-####_TokuDB_
+#### _TokuDB_
   - 쓰기 작업에 최적화된 엔진  
   - 꽤 괜찮은 성능의 압축 기능  
-  - 빅데이터를 다루는 상황에서는 가장 좋은 선택  
-<br>     
-##### 조금 더 자세하게 알아보자   
+  - 빅데이터를 다루는 상황에서는 가장 좋은 선택      
+##### 조금 더 자세하게 알아보자
   - 읽기 최적화
     - 보조 인덱스 사용
     - Read Free Replication
@@ -75,24 +68,19 @@ tags: [database, maria db, MySQL] # add tag
     - Bulk loader
     - 데이터 압축
   - **외래키가 지원되지 않음**
-  - InnoDB에 비해 Crash Recovery기능이 부족함
-<br>
-<br>     
+  - InnoDB에 비해 Crash Recovery기능이 부족함  
 ####_MyRocks_
   - 쓰기와 저장 공간 구성에 최적화된 엔진
   - 최고 성능의 압축 기능
   - SSD를 사용하는 상황에서 가장 좋은 선택
   - [[MyRocks: A space- and write-optimized MySQL database]](https://engineering.fb.com/core-data/myrocks-a-space-and-write-optimized-mysql-database/)  
-<br>
 ##### 조금 더 자세하게 알아보자
   - LSM Tree 사용
     - 쓰기와 저장 공간 구성에 최적화 된 방법
     - 모든 쓰기 동작은 메모리 테이블과 WAL을 먼저 수행
     - 작은 트랜잭션을 위해 디자인된 방법
   - **외래키가 지원되지 않음**
-  - 일부 타입에만 인덱스를 적용할 수 있다.
-<br>
-<br> 
+  - 일부 타입에만 인덱스를 적용할 수 있다.  
 ### **결론**
 1. **이론상 로그성 데이터를 저장하기엔 InnoDB보단 TokuDB나 MyRocks를 사용하는 것이 이점이 더 많아보인다.**  
 2. **여러가지 운영 환경과 시스템 구조에 대한 것을 종합해서 적용 여부를 판단하는 것이 좋겠다.**    
