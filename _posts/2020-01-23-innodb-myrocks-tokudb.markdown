@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MyRocks vs TokuDB vs InnoDB
+title: InnoDB vs MyRocks vs TokuDB
 date: 2020-01-10 00:00:00 +0300
 description: # Add post description (optional)
 img: #software.jpg # Add image post (optional)
@@ -8,7 +8,7 @@ fig-caption: # Add figcaption (optional)
 tags: [database, maria db, MySQL] # add tag
 ---
 
-# MyRocks vs TokuDB vs InnoDB
+# InnoDB vs MyRocks vs TokuDB
 ## 목표 : InnoDB, MyRocks, TokuDB의 특징을 이해, 이슈 개선안 도출 
 ### 최근 발생한 이슈    
 1. 로그성 데이터를 저장하는 테이블이 커지기 시작하면서 저장소의 용량이 부족해짐
