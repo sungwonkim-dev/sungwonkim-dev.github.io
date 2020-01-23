@@ -5,10 +5,11 @@ date: 2020-01-10 00:00:00 +0300
 description: # Add post description (optional)
 img: #software.jpg # Add image post (optional)
 fig-caption: # Add figcaption (optional)
+published : false
 tags: [java, nlp, text, taming text] # add tag
 ---
 
-# 인명, 지명, 사물 식별
+# 텍스트 클러스터링
 ## 목표 : 텍스트 클러스터링에 대한 이해
  
 ### 텍스트 클러스터링이란?    
