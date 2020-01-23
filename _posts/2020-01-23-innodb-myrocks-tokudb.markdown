@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Maria DB] MyRocks vs TokuDB vs Archive Engine
+title: MyRocks vs TokuDB vs Archive Engine
 date: 2020-01-10 00:00:00 +0300
 description: # Add post description (optional)
 img: #software.jpg # Add image post (optional)
