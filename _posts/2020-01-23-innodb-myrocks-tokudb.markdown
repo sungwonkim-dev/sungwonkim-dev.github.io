@@ -7,19 +7,16 @@ img: #software.jpg # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [database, maria db, MySQL] # add tag
 ---
-
 # InnoDB vs MyRocks vs TokuDB
 ## 목표 : InnoDB, MyRocks, TokuDB의 특징을 이해, 이슈 개선안 도출 
 ### 최근 발생한 이슈    
 1. 로그성 데이터를 저장하는 테이블이 커지기 시작하면서 저장소의 용량이 부족해짐  
 2. 1번으로 인해서 로그성 데이터가 저장되지 못 하는 장애 상황 발생
-  
 ### 목표
 **데이터의 압축률이 높은 Storage Engine 또는 기능을 찾고자 함**  
   * 로그성 데이터에 적합한 Storage Engine 또는 기능
   * NoSQL은 최후의 수단으로..
     * 시스템  구조상..
-  
 ### DB와 Table 정보
 1. DB 정보
   * mysql  Ver 14.14 Distrib 5.1.73, for redhat-linux-gnu (x86_64) using readline 5.1  
@@ -31,7 +28,6 @@ tags: [database, maria db, MySQL] # add tag
   * 각 테이블당 최대 199GB, 최소 58GB의 용량을 차지  
     * 전체 1,726GB
   * 주로 insert와 select 쿼리만 사용한다.
-
 ### Storage Engine 후보
 #### InnoDB와 후보들의 공통 특징
   * Transaction 지원
@@ -46,7 +42,6 @@ tags: [database, maria db, MySQL] # add tag
     * 하나 이상의 DB간 2PC가 보장돼야 하는 경우에 유용
     * [[XA 개념 정리]](https://heni.tistory.com/10)
   * automatic crash recovery
-   
 **아래부턴 각 엔진별 비교이기 때문에 사용되는 강조 표현에는 `각 엔진에 비해`가 있다고 생각해주세요.**  
 #### InnoDB  
   * 만능이다
@@ -70,7 +65,6 @@ tags: [database, maria db, MySQL] # add tag
     * 데이터 압축
   * **외래키가 지원되지 않음**
   * InnoDB에 비해 Crash Recovery기능이 부족함
-  
 #### MyRocks
   * 쓰기와 저장 공간 구성에 최적화된 엔진
   * 최고 성능의 압축 기능
