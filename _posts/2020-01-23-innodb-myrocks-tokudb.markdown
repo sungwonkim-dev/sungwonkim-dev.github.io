@@ -47,12 +47,12 @@ tags: [database, maria db, MySQL] # add tag
   - automatic crash recovery
    
 **아래부턴 각 엔진별 비교이기 때문에 사용되는 강조 표현에는 `각 엔진에 비해`가 있다고 생각해주세요.**  
-#### _InnoDB_  
+#### InnoDB  
   - 만능이다
     - 어느 상황에나 성능 이슈에 크게 신경쓰지 않아도 된다.
   - MySQL 5.5.5 버젼부턴 기본 엔진으로 사용된다.
     - 만능이라는 얘기
-#### _TokuDB_
+#### TokuDB  
   - 쓰기 작업에 최적화된 엔진  
   - 꽤 괜찮은 성능의 압축 기능  
   - 빅데이터를 다루는 상황에서는 가장 좋은 선택
@@ -69,7 +69,7 @@ tags: [database, maria db, MySQL] # add tag
     - 데이터 압축
   - **외래키가 지원되지 않음**
   - InnoDB에 비해 Crash Recovery기능이 부족함
-####_MyRocks_
+#### MyRocks
   - 쓰기와 저장 공간 구성에 최적화된 엔진
   - 최고 성능의 압축 기능
   - SSD를 사용하는 상황에서 가장 좋은 선택
