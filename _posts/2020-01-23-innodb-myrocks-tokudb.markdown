@@ -37,21 +37,21 @@ tags: [database, maria db, MySQL] # add tag
   * ACID
   * Row Level Locking
   * MVCC
-    - DBMS에서 Lock을 사용하지 않고 데이터의 읽기 일관성을 보장해주는 기법
-    - 읽기, 쓰기 작업이 많은 DB에는 매우 유용
-    - [[MVCC]](https://mysqldba.tistory.com/335)
+    * DBMS에서 Lock을 사용하지 않고 데이터의 읽기 일관성을 보장해주는 기법
+    * 읽기, 쓰기 작업이 많은 DB에는 매우 유용
+    * [[MVCC]](https://mysqldba.tistory.com/335)
   *  XA 
-    - 2 Phase Commit을 통해 분산 트랜잭션 처리가 가능
-    - 하나 이상의 DB간 2PC가 보장돼야 하는 경우에 유용
-    - [[XA 개념 정리]](https://heni.tistory.com/10)
+    * 2 Phase Commit을 통해 분산 트랜잭션 처리가 가능
+    * 하나 이상의 DB간 2PC가 보장돼야 하는 경우에 유용
+    * [[XA 개념 정리]](https://heni.tistory.com/10)
   * automatic crash recovery
 **아래부턴 각 엔진별 비교이기 때문에 사용되는 강조 표현에는 `각 엔진에 비해`가 있다고 생각해주세요.**  
 
 #### InnoDB  
   * 만능이다
-    - 어느 상황에나 성능 이슈에 크게 신경쓰지 않아도 된다.
+    * 어느 상황에나 성능 이슈에 크게 신경쓰지 않아도 된다.
   * MySQL 5.5.5 버젼부턴 기본 엔진으로 사용된다.
-    - 만능이라는 얘기
+    * 만능이라는 얘기
   
 #### TokuDB
   * 쓰기 작업에 최적화된 엔진  
@@ -59,15 +59,15 @@ tags: [database, maria db, MySQL] # add tag
   * 빅데이터를 다루는 상황에서는 가장 좋은 선택
 **조금 더 자세하게 알아보자**
   * 읽기 최적화
-    - 보조 인덱스 사용
-    - Read Free Replication
-    - [[TokuDB Read Free Replication : Details and Use Cases]](https://www.percona.com/blog/2014/09/25/tokudb-read-free-replication-details-and-use-cases/)
-    - NO 인덱스 단편화
-    - [[How to Identify and Fix SQL Server Index Fragmentation]](https://logicalread.com/2015/10/30/fix-sql-server-index-fragmentation-mc11/#.XikYQsj7SUl)
+    * 보조 인덱스 사용
+    * Read Free Replication
+    * [[TokuDB Read Free Replication : Details and Use Cases]](https://www.percona.com/blog/2014/09/25/tokudb-read-free-replication-details-and-use-cases/)
+    * NO 인덱스 단편화
+    * [[How to Identify and Fix SQL Server Index Fragmentation]](https://logicalread.com/2015/10/30/fix-sql-server-index-fragmentation-mc11/#.XikYQsj7SUl)
   * 쓰기 최적화
-    - 빠른 INSERT
-    - Bulk loader
-    - 데이터 압축
+    * 빠른 INSERT
+    * Bulk loader
+    * 데이터 압축
   * **외래키가 지원되지 않음**
   * InnoDB에 비해 Crash Recovery기능이 부족함
   
@@ -78,9 +78,9 @@ tags: [database, maria db, MySQL] # add tag
   * [[MyRocks: A space- and write-optimized MySQL database]](https://engineering.fb.com/core-data/myrocks-a-space-and-write-optimized-mysql-database/)
 **조금 더 자세하게 알아보자**
   * LSM Tree 사용
-    - 쓰기와 저장 공간 구성에 최적화 된 방법
-    - 모든 쓰기 동작은 메모리 테이블과 WAL을 먼저 수행
-    - 작은 트랜잭션을 위해 디자인된 방법
+    * 쓰기와 저장 공간 구성에 최적화 된 방법
+    * 모든 쓰기 동작은 메모리 테이블과 WAL을 먼저 수행
+    * 작은 트랜잭션을 위해 디자인된 방법
   * **외래키가 지원되지 않음**
   * 일부 타입에만 인덱스를 적용할 수 있다.
   
