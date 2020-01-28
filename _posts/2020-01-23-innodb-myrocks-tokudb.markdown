@@ -41,9 +41,9 @@ tags: [database, maria db, MySQL] # add tag
     * 읽기, 쓰기 작업이 많은 DB에는 매우 유용
     * [[MVCC]](https://mysqldba.tistory.com/335)
   *  XA 
-    * 2 Phase Commit을 통해 분산 트랜잭션 처리가 가능
-    * 하나 이상의 DB간 2PC가 보장돼야 하는 경우에 유용
-    * [[XA 개념 정리]](https://heni.tistory.com/10)
+    * 2 Phase Commit을 통해 분산 트랜잭션 처리가 가능  
+    * 하나 이상의 DB간 2PC가 보장돼야 하는 경우에 유용  
+    * [[XA 개념 정리]](https://heni.tistory.com/10)  
   * automatic crash recovery  
   
 **아래부턴 각 엔진별 비교이기 때문에 사용되는 강조 표현에는 `각 엔진에 비해`가 있다고 생각해주세요.**  
