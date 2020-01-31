@@ -41,9 +41,7 @@ tags: [java, kafka, database, application-design] # add tag
 ## 개선 방안
 ### 요약 : 스트리밍 분산 플랫폼인 아파치 카프카를 도입하자
 ![아파치 카프카 에코시스템](../assets/img/post/ecosystem-of-kafka.png)  
-
 **[아파치 카프카 레퍼런스](https://kafka.apache.org/intro)와 많은 블로그에서 카프카에 대한 설명은 많으니 해당 플랫폼을 어떻게 적용할 것인가만 작성하도록 하겠습니다.**
-
 
 ![실시간 데이터 가공 시스템 요약도](../assets/img/post/live-data-processing-system-new.png)
 1. 로드 밸런싱 - 카프카에 내장된 요청(Message)에 대한 병렬 처리 기능 활용
