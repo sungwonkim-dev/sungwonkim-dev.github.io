@@ -5,7 +5,7 @@ date: 2020-01-10 00:00:00 +0300
 description: # Add post description (optional)
 img: #software.jpg # Add image post (optional)
 fig-caption: # Add figcaption (optional)
-published : false
+published : #false
 tags: [java, nlp, text, taming text] # add tag
 ---
 
