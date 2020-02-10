@@ -5,11 +5,12 @@ date: 2020-01-31 00:00:00 +0300
 description: # Add post description (optional)
 img: #software.jpg # Add image post (optional)
 fig-caption: # Add figcaption (optional)
-tags: [java, kafka, database, application-design] # add tag
+tags: [java, database, application-design] # add tag
 ---
 
 # 카프카를 활용한 실시간 데이터 가공 시스템 개선
 ## 실시간 데이터 가공 시스템??
+### [AS-IS]
 ![실시간 데이터 가공 시스템 요약도](../assets/img/post/live-data-processing-system-old.png)
 
 **시스템 요약**
@@ -39,24 +40,15 @@ tags: [java, kafka, database, application-design] # add tag
 3.1. 데이터의 양이 정해진 것이 아니라 스케일러블하게 운용이 가능하면 좋겠음
 
 ## 개선 방안
-### 요약 : 스트리밍 분산 플랫폼인 아파치 카프카를 도입하자
-![아파치 카프카 에코시스템](../assets/img/post/ecosystem-of-kafka.png)  
-**[아파치 카프카 레퍼런스](https://kafka.apache.org/intro)와 많은 블로그에서 카프카에 대한 설명은 많으니 해당 플랫폼을 어떻게 적용할 것인가만 작성하도록 하겠습니다.**
+### 요약 : 해당 요청들을 메시지로 처리하기 위해 RabbitMQ를 도입하자
+![RabbitMQ](https://www.rabbitmq.com/img/tutorials/intro/hello-world-example-routing.png)  
+**[RabbitMQ 레퍼런스](https://www.rabbitmq.com/documentation.html)와 블로그글이 많으니 다음 포스팅에선 아주 자세한 설명은 생략하고 간단한 설명만 작성합니다.**
 
+### [TO-BE]
 ![실시간 데이터 가공 시스템 요약도](../assets/img/post/live-data-processing-system-new.png)
-1. 로드 밸런싱 - 카프카에 내장된 요청(Message)에 대한 병렬 처리 기능 활용
+1. 로드 밸런싱 - RabbitMQ에 내장된 Message에 대한 병렬 처리 기능 활용
 2. 대기열 기능 - 메시지 큐  활용
 3. 많은 데이터에 대한 실시간 처리 기능 - 대용량 요청을 파티션 기능으로 빠르고 스케일러블하게 처리 가능
 4. DB CONNECTION 어플리케이션 추가로 DB 부하 및 응답 지연 개선
 
-## 다음 포스팅 예고
-* Apache Kafka 테스트 환경 구현
-* Apache Kafka 기능 맛보기
-* Apache Kafka 토이 프로젝트 생성
-  * source
-  * processor
-  * sink
-
-**카프카를 활용한 실시간 데이터 가공 시스템 개선 시리즈는 적용기 위주로 포스팅할 예정입니다.**  
-_기본 개념에 대한 설명은 좋은 레퍼런스와 글이 많은 관계로.._
- 
+## 다음 포스팅  : Kafka vs RabbitMQ
