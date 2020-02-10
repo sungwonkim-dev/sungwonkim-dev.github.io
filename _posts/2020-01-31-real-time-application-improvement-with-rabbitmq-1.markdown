@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 카프카를 활용한 실시간 데이터 가공 시스템 개선 (1) - 이슈와 개선 방향
+title: RabbitMQ를 활용한 실시간 데이터 가공 시스템 개선 (1) - 이슈와 개선 방향
 date: 2020-01-31 00:00:00 +0300
 description: # Add post description (optional)
 img: #software.jpg # Add image post (optional)

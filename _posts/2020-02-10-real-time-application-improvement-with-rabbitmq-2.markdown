@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 카프카를 활용한 실시간 데이터 가공 시스템 개선 (2) - RabbitMQ Tutorial
+title: RabbitMQ를 활용한 실시간 데이터 가공 시스템 개선 (2) - RabbitMQ Tutorial
 date: 2020-02-10 00:00:00 +0300
 description: # Add post description (optional)
 img: #software.jpg # Add image post (optional)
@@ -35,11 +35,11 @@ tags: [java, rabbitmq, database, application-design] # add tag
 
 #### 이해를 돕기 위한 자료
 ![Kafka vs RabbitMQ_1](../assets/img/post/kafka_vs_rabbitmq_message_management.PNG)  
-
+##
 ![Kafka vs RabbitMQ_2](../assets/img/post/kafka_vs_rabbitmq_message_routingPNG.PNG)  
-
+##
 ![Kafka vs RabbitMQ_3](../assets/img/post/kafka_vs_rabbitmq_message_processing.PNG)  
-
+##
 ##### 풀 vs 푸시
 *   풀 기반 : 소비자가 메시지 브로커에서 메시지를 요청하고 이를 받는 형식
 * 푸시 기반 : 메시지 브로커가 소비자에게 메시지를 전달하고 이를 받는 형식  
