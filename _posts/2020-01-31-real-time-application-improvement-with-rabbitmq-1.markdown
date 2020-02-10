@@ -8,7 +8,7 @@ fig-caption: # Add figcaption (optional)
 tags: [java, database, application-design] # add tag
 ---
 
-# 카프카를 활용한 실시간 데이터 가공 시스템 개선
+# RabbitMQ를 활용한 실시간 데이터 가공 시스템 개선
 ## 실시간 데이터 가공 시스템??
 ### [AS-IS]
 ![실시간 데이터 가공 시스템 요약도](../assets/img/post/live-data-processing-system-old.png)

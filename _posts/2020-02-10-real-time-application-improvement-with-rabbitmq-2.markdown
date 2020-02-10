@@ -8,7 +8,7 @@ fig-caption: # Add figcaption (optional)
 tags: [java, rabbitmq, database, application-design] # add tag
 ---
 
-# 카프카를 활용한 실시간 데이터 가공 시스템 개선
+# RabbitMQ를 활용한 실시간 데이터 가공 시스템 개선
 ## 갑자기 RabbitMQ??
 **포스팅에선 다루지 않았지만 Apache Kafka와 RabbitMQ에 대한 리서치를 진행했었다.**  
 **요약과 함께 특징을 나열해보겠다**
