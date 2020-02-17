@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RabbitMQ를 활용한 실시간 데이터 가공 시스템 개선 (3) - 시스템 구성
-date: 2020-02-13 00:00:00 +0300
+date: 2020-02-17 00:00:00 +0300
 description: # Add post description (optional)
 img: #software.jpg # Add image post (optional)
 fig-caption: # Add figcaption (optional)
