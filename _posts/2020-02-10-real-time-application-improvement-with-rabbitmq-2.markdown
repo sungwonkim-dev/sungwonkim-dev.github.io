@@ -19,9 +19,9 @@ tags: [java, rabbitmq, database, application-design] # add tag
 ### RabbitMQ
 1. 다양한 요청과 응답, 포인트 투 포인트 및 Pub - Sub 패턴을 사용 
 2. 푸시 기반 메시지 처리  
-3. SOA를 위한 플랫폼
-3.1. SOA는 Service Oriented Architecture의 약자
-3.2. 마이크로 서비스에 적용성이 좋음
+3. SOA를 위한 플랫폼  
+3.1. SOA는 Service Oriented Architecture의 약자  
+3.2. 마이크로 서비스에 적용성이 좋음  
 4. pub과 sub의 시간차가 매우 작다.
 
 ### Apache Kafka   
