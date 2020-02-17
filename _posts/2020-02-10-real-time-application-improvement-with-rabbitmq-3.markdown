@@ -25,7 +25,7 @@ tags: [java, rabbitmq, database, application-design] # add tag
   
 ### RabbitMQ 설치 및 매니지먼트 앱 실행  
 
-```shell script
+```shell script  
 #환경 구축  
 yum -y install epel-release # EPEL 저장소 설치  
 yum -y update               # 업데이트  
