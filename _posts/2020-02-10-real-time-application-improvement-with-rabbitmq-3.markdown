@@ -23,25 +23,26 @@ tags: [java, rabbitmq, database, application-design] # add tag
 ### 시스템 구성 계획
 ![RabbitMQ_Proxy_System](../assets/img/post/live-data-processing-system-rabbitmq.png)
   
-### RabbitMQ 설치 및 매니지먼트 앱 실행
+### RabbitMQ 설치 및 매니지먼트 앱 실행  
+
 ```shell script
-# 환경 구축
-yum -y install epel-release # EPEL 저장소 설치
-yum -y update               # 업데이트
-yum -y install erlang socat # rabbitmq 구성 언어, 소켓 통신 
+#환경 구축  
+yum -y install epel-release # EPEL 저장소 설치  
+yum -y update               # 업데이트  
+yum -y install erlang socat # rabbitmq 구성 언어, 소켓 통신   
 
-erl -version # 설치 및 적용 확인, Erlang (ASYNC_THREADS,HIPE) (BEAM) emulator version 5.10.4
+erl -version # 설치 및 적용 확인, Erlang (ASYNC_THREADS,HIPE) (BEAM) emulator version 5.10.4  
 
-# rabbitmq 환경 구축
-wget https://www.rabbitmq.com/releases/rabbitmq-server/v3.6.10/rabbitmq-server-3.6.10-1.el7.noarch.rpm #  rpm 다운로드
-rpm --import https://www.rabbitmq.com/rabbitmq-release-signing-key.asc # 키 등록
-rpm -Uvh rabbitmq-server-3.6.10-1.el7.noarch.rpm # 설치
+# rabbitmq 환경 구축  
+wget https://www.rabbitmq.com/releases/rabbitmq-server/v3.6.10/rabbitmq-server-3.6.10-1.el7.noarch.rpm #  rpm 다운로드  
+rpm --import https://www.rabbitmq.com/rabbitmq-release-signing-key.asc # 키 등록  
+rpm -Uvh rabbitmq-server-3.6.10-1.el7.noarch.rpm # 설치  
 
-systemctl start rabbitmq-server  # 서버 실행
-systemctl enable rabbitmq-server # 서버 부팅마다 실행하도록 설정
-systemctl status rabbitmq-server # 서버 상태 확인
+systemctl start rabbitmq-server  # 서버 실행  
+systemctl enable rabbitmq-server # 서버 부팅마다 실행하도록 설정  
+systemctl status rabbitmq-server # 서버 상태 확인  
 
-# 방화벽 설정, 필요시 진행
+# 방화벽 설정, 필요시 진행  
 firewall-cmd --zone=public --permanent --add-port=4369/tcp
 firewall-cmd --zone=public --permanent --add-port=25672/tcp
 firewall-cmd --zone=public --permanent --add-port=5671-5672/tcp
@@ -52,17 +53,18 @@ firewall-cmd --zone=public --permanent --add-port=8883/tcp
 
 firewall-cmd --reload
 
-# 매니지먼트 설정
+# 매니지먼트 설정  
 rabbitmq-plugins enable rabbitmq_management
 chown -R rabbitmq:rabbitmq /var/lib/rabbitmq/
 
-rabbitmqctl add_user admin "password" # 계정 추가
-rabbitmqctl set_user_tags admin administrator  # 태그 등록
-rabbitmqctl set_permissions -p / admin ".*" ".*" ".*"  # 권한 설정
+rabbitmqctl add_user admin "password" # 계정 추가  
+rabbitmqctl set_user_tags admin administrator  # 태그 등록  
+rabbitmqctl set_permissions -p / admin ".*" ".*" ".*"  # 권한 설정  
 
-#접속 URL
-http://ip:15672/ # remote server ip or localhost
+#접속 URL  
+http://ip:15672/ # remote server ip or localhost  
 ```
+
 #### 접속 화면
 ![RabbitMQ_Management_ui_home](../assets/img/post/live-data-processing-system-rabbitmq-management-ui.png)
 **admin과 입력한 패스워드로 로그인해서 위와 같은 화면이 나온다면 구축 성공이다.**  
