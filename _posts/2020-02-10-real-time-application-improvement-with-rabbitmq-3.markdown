@@ -25,7 +25,7 @@ tags: [java, rabbitmq, database, application-design] # add tag
   
 ### RabbitMQ 설치 및 매니지먼트 앱 실행  
 
-```shell script  
+```.shell script
 #환경 구축  
 yum -y install epel-release # EPEL 저장소 설치  
 yum -y update               # 업데이트  
@@ -76,8 +76,9 @@ http://ip:15672/ # remote server ip or localhost
 2. 클러스터 설정    
 **클러스터 설정에는 두 가지 방법이 있다. 아래 나오는 문항은 설정 순서가 아닌 방법을 나열한 것이다.**  
 2.1. [메뉴얼](https://www.rabbitmq.com/clustering.html) 따라하기  
-2.2. 메뉴얼을 정리한 아래 스크립트 따라하기
-```shell script
+2.2. 메뉴얼을 정리한 아래 스크립트 따라하기  
+
+```.shell script
 # 쿠키 복사, 같은 쿠키로 설정해야 통신이 가능하다.
 [sungwonkim@rabbit-main]   vi /var/lib/rabbitmq/.erlang.cookie  #복
 [sungwonkim@rabbit-mirror] vi /var/lib/rabbitmq/.erlang.cookie  #붙
@@ -114,7 +115,7 @@ Cluster status of node 'rabbit@rabbit-main'
 
 3. 프록시 설정
 
-```shell script
+```.shell script  
 # 별도 서버를 구축하지 않고 main에서 프록시 설정
 [sungwonkim@rabbit-main] yum install haproxy
 [sungwonkim@rabbit-main] vi /etc/haproxy/haproxy.cfg
