@@ -226,4 +226,4 @@ public class RabbitMQMessageConsumer {
 **결론 : 간단한 설정으로 구성과 메시지 생산 소비를 했지만 이것을 했다고 RabbitMQ를 다룰 줄 아는 것은 아니다.**  
 **다양한 옵션을 찾아가며 성능에 대한 연구가 필요하다.** 
  
-## 다음 포스팅 : RabbitMQ 옵션 및 성능 테스트
+## 다음 포스팅 : RabbitMQ + Prometheus + Grafana 조합으로 메시지 큐 모니터링하기
